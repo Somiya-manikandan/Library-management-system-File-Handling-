@@ -2,7 +2,7 @@ import os
 
 FILE_NAME = "library.txt"
 
-# Add new book
+
 def add_book():
     book_id = input("Enter Book ID: ")
     name = input("Enter Book Name: ")
@@ -14,7 +14,7 @@ def add_book():
     print("Book added successfully!\n")
 
 
-# View all books
+
 def view_books():
     if not os.path.exists(FILE_NAME):
         print("No books available.\n")
@@ -33,7 +33,7 @@ def view_books():
             print()
 
 
-# Search book
+
 def search_book():
     search_id = input("Enter Book ID to search: ")
     found = False
@@ -50,7 +50,6 @@ def search_book():
         print("Book not found.\n")
 
 
-# Issue book
 def issue_book():
     issue_id = input("Enter Book ID to issue: ")
     updated_books = []
@@ -74,7 +73,6 @@ def issue_book():
         print("Book not available or not found.\n")
 
 
-# Return book
 def return_book():
     return_id = input("Enter Book ID to return: ")
     updated_books = []
@@ -98,7 +96,7 @@ def return_book():
         print("Book not found or already available.\n")
 
 
-# Main Menu
+
 while True:
     print("===== Library Management System =====")
     print("1. Add Book")
@@ -124,4 +122,5 @@ while True:
         print("Exiting program...")
         break
     else:
+
         print("Invalid choice! Try again.\n")
